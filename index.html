@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.8.2/dist/alpine.min.js" defer></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+    body {
+      font-family: 'Poppins', sans-serif;
+    }
+
+    .hero-bg {
+      background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1600494603989-9650e6e5f0f1?ixlib=rb-4.0.3&ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80');
+      background-size: cover;
+      background-position: center;
+    }
+
+    .card-hover:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    }
+  </style>
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+    body {
+      font-family: 'Poppins', sans-serif;
+    }
+
+    .hero-bg {
+      background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+        url('./public/hero.png');
+      background-size: cover;
+      background-position: center;
+    }
+
+    .card-hover:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    }
+  </style>
+</head>
+
+<!-- jen -->
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JL Explore Bus</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+
+<body class="bg-gray-50 text-gray-800">
+  <!-- end jen -->
+
+  <body class="bg-gray-50 text-gray-800">
+    <!-- Header/Navigation -->
+    <header class="sticky top-0 z-50 bg-white shadow-sm">
+      <div class="container mx-auto px-4 py-3">
+        <div class="flex justify-between items-center">
+          <!-- Logo -->
+          <div class="flex items-center">
+            <div class="w-12 h-12 rounded-full bg-yellow-400 flex items-center justify-center mr-3">
+              <!-- <i class="fa-brands fa-bus text-white text-xl"></i> -->
+              <i class="fa-solid fa-bus"></i>
+            </div>
+            <div>
+              <h1 class="text-xl font-bold text-gray-800">JL Explore Bus</h1>
+              <p class="text-xs text-gray-500">Jln Raya kelapa dua legok Karawaci Tangerang</p>
+            </div>
+          </div>
+
+          <!-- Menu Desktop -->
+          <nav class="hidden md:flex space-x-8">
+            <a href="#home" class="text-gray-800 hover:text-yellow-500 font-medium transition">Beranda</a>
+            <a href="#profile" class="text-gray-800 hover:text-yellow-500 font-medium transition">Profil</a>
+            <a href="#layanan" class="text-gray-800 hover:text-yellow-500 font-medium transition">Layanan</a>
+            <a href="#contact" class="text-gray-800 hover:text-yellow-500 font-medium transition">Kontak</a>
+          </nav>
+
+          <!-- Hamburger Menu (Mobile) -->
+          <button id="menu-toggle" class="md:hidden text-gray-800">
+            <i class="fas fa-bars text-xl"></i>
+          </button>
+        </div>
+
+        <!-- Menu Mobile -->
+        <div id="mobile-menu" class="md:hidden hidden flex-col mt-4 space-y-2">
+          <a href="#home" class="block py-2 px-4 text-gray-800 hover:text-yellow-500 font-medium">Beranda</a>
+          <a href="#profile" class="block py-2 px-4 text-gray-800 hover:text-yellow-500 font-medium">Profil</a>
+          <a href="#layanan" class="block py-2 px-4 text-gray-800 hover:text-yellow-500 font-medium">Layanan</a>
+          <a href="#contact" class="block py-2 px-4 text-gray-800 hover:text-yellow-500 font-medium">Kontak</a>
+        </div>
+      </div>
+    </header>
+
+    <!-- jen -->
+    <!-- Script untuk toggle menu dan auto-hide saat diklik -->
+    <script>
+      const toggleBtn = document.getElementById('menu-toggle');
+      const mobileMenu = document.getElementById('mobile-menu');
+
+      toggleBtn.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+      });
+
+      // Tutup menu setelah klik salah satu link (untuk mobile)
+      const menuLinks = mobileMenu.querySelectorAll('a');
+      menuLinks.forEach(link => {
+        link.addEventListener('click', () => {
+          mobileMenu.classList.add('hidden');
+        });
+      });
+    </script>
+    <!-- end jen -->
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-bg min-h-[60vh] flex items-center text-white">
+      <div class="container mx-auto px-4 py-20">
+        <div class="max-w-2xl">
+          <h1 class="text-4xl md:text-5xl font-bold mb-4">Selamat datang di</h1>
+          <!-- <h1 class="text-4xl md:text-5xl font-bold mb-4">JL Explore Bus</h1> -->
+          <h1 class="text-4xl md:text-6xl font-extrabold text-yellow-600 mb-4">
+                JL Explore Bus
+              </h1>
+          <p class="text-lg md:text-xl mb-6">JL Explore Bus siap mengantarkan Anda menjelajah keindahan Indonesia dengan bus pariwisata yang nyaman, aman, dan terpercaya. 
+            Mulai dari study tour, family trip, hingga corporate gathering — kami hadir sebagai partner perjalanan terbaik Anda.</p>
+
+          <!-- <p class="text-lg md:text-xl mb-6"></p>“Gondrong Itu Seni, Audio Itu Harmoni...”</p> -->
+
+          <!-- <div class="flex flex-wrap gap-4">
+                        <a href="#contact"
+                            class="px-6 py-3 bg-yellow-500 hover:bg-yellow-600 rounded-lg text-white font-medium transition">Daftar
+                            Sekarang</a>
+                        <a href="#program"
+                            class="px-6 py-3 bg-white/20 hover:bg-white/30 rounded-lg text-white font-medium transition">Lihat
+                            Program</a>
+                    </div> -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Profile Section -->
+    <section id="profile" class="py-16 bg-white">
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl font-bold text-gray-800 mb-4">Profile</h2>
+          <div class="w-20 h-1 bg-yellow-500 mx-auto"></div>
+        </div>
+
+        <div class="flex flex-col md:flex-row items-center gap-8">
+          <div class="md:w-1/2">
+            <img src="./public/hero3.jpeg" alt="gbass" class="rounded-lg shadow-lg w-full h-auto">
+          </div>
+          <div class="md:w-1/2">
+            <h3 class="text-2xl font-semibold text-gray-800 mb-4">JL Explore Bus</h3>
+            <p class="text-gray-600 mb-4">JL Explore Bus adalah perusahaan transportasi pariwisata yang berkomitmen menyediakan layanan perjalanan yang aman, nyaman, dan menyenangkan 
+              ke berbagai destinasi wisata di Indonesia. Sejak didirikan pada tahun 2015, kami telah menjadi mitra terpercaya bagi ribuan pelanggan dari kalangan sekolah, perusahaan, 
+              komunitas, hingga keluarga besar.</p>
+            <p class="text-gray-600 mb-4">Visi :
+                  Menjadi penyedia layanan transportasi wisata terbaik di Indonesia dengan mengutamakan profesionalisme, kenyamanan, dan kepuasan pelanggan.</p>
+            <div class="flex flex-wrap gap-4 mt-6">
+              <div class="flex items-center">
+                <i class="fas fa-check-circle text-yellow-500 mr-2"></i>
+                <span>Armada Modern dan Nyaman : 
+                      Kami menyediakan berbagai pilihan bus mulai dari medium hingga big bus dengan fasilitas AC, reclining seat, audio video, dan interior bersih serta terawat.</span>
+              </div>
+              <div class="flex items-center">
+                <i class="fas fa-check-circle text-yellow-500 mr-2"></i>
+                <span>Layanan Ramah dan Profesional : 
+                      Tim kami terdiri dari sopir berpengalaman dan kru ramah yang siap membantu Anda sepanjang perjalanan.</span>
+              </div>
+              <div class="flex items-center">
+                <i class="fas fa-check-circle text-yellow-500 mr-2"></i>
+                <span>Fleksibel dan Terjangkau : 
+                    Kami melayani berbagai kebutuhan transportasi: mulai dari wisata keluarga, study tour, gathering kantor, hingga event khusus — dengan harga yang kompetitif.</span>
+              </div>
+                <div class="flex items-center">
+                <i class="fas fa-check-circle text-yellow-500 mr-2"></i>
+                <span>Paket Wisata Lengkap : 
+                  Butuh paket wisata yang sudah termasuk transportasi, penginapan, dan makan? Kami siap merancang perjalanan sesuai kebutuhan Anda.</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Program Section -->
+    <section id="layanan" class="py-16 bg-gray-50">
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl font-bold text-gray-800 mb-4">Layanan</h2>
+          <div class="w-20 h-1 bg-yellow-500 mx-auto"></div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+          <!-- Program 1 -->
+          <div class="bg-white rounded-lg shadow-md overflow-hidden transition duration-300 hover:shadow-xl">
+            <div class="h-48 bg-gray-200 flex items-center justify-center">
+              <img src="./public/wisata.png" alt="wisata" class="h-full w-full object-cover">
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-semibold text-gray-800 mb-3">Paket Wisata Terpadu</h3>
+              <p class="text-gray-600 mb-4">Kami menyediakan paket wisata lengkap meliputi transportasi, penginapan, makan, tiket masuk objek wisata, dan tour leader. Cocok untuk sekolah, instansi, atau komunitas.</p>
+              <!-- <a href="#" class="text-yellow-500 font-medium inline-flex items-center hover:underline">
+                                Selengkapnya <i class="fas fa-chevron-right ml-2 text-sm"></i>
+                            </a> -->
+            </div>
+          </div>
+
+          <!-- Program 2 -->
+          <div class="bg-white rounded-lg shadow-md overflow-hidden transition duration-300 hover:shadow-xl">
+            <div class="h-48 bg-gray-200 flex items-center justify-center">
+              <img src="./public/dinas.png" alt="dinas"
+                class="h-full w-full object-cover">
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-semibold text-gray-800 mb-3">Layanan Perjalanan Dinas & Study Tour, Edu Trip</h3>
+              <p class="text-gray-600 mb-4">Layanan untuk perusahaan atau instansi dalam kegiatan outing, gathering, kunjungan kerja, maupun transportasi event dengan dukungan administrasi profesional
+                ,      Bekerja sama dengan sekolah dan kampus untuk menyusun paket edukatif ke berbagai destinasi, lengkap dengan guide dan dokumentasi..</p>
+              <!-- <a href="#" class="text-yellow-500 font-medium inline-flex items-center hover:underline">
+                                Selengkapnya <i class="fas fa-chevron-right ml-2 text-sm"></i>
+                            </a> -->
+            </div>
+          </div>
+
+          <!-- Program 3 -->
+          <div class="bg-white rounded-lg shadow-md overflow-hidden transition duration-300 hover:shadow-xl">
+            <div class="h-48 bg-gray-200 flex items-center justify-center">
+              <img src="./public/religi.png" alt="religi"
+                class="h-full w-full object-cover">
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-semibold text-gray-800 mb-3">Ziarah & Perjalanan Religi</h3>
+              <p class="text-gray-600 mb-4">Layanan khusus perjalanan ke tempat-tempat religi seperti Wali Songo, Cirebon, dan lainnya. Fasilitas nyaman dan sopir yang berpengalaman di rute religi.</p>
+              <!-- <a href="#" class="text-yellow-500 font-medium inline-flex items-center hover:underline">
+                                Selengkapnya <i class="fas fa-chevron-right ml-2 text-sm"></i>
+                            </a> -->
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 bg-white">
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl font-bold text-gray-800 mb-4">Hubungi Kami</h2>
+          <div class="w-20 h-1 bg-yellow-500 mx-auto"></div>
+        </div>
+
+        <div class="flex flex-col md:flex-row gap-8">
+          <div class="md:w-1/2">
+            <div class="bg-gray-50 rounded-lg p-6 shadow-md">
+              <h3 class="text-xl font-semibold text-gray-800 mb-4">Informasi Kontak</h3>
+              <div class="space-y-4">
+                <div class="flex items-start">
+                  <div class="w-8 h-8 rounded-full bg-yellow-100 flex items-center justify-center mr-4">
+                    <i class="fas fa-map-marker-alt text-yellow-500"></i>
+                  </div>
+                  <div>
+                    <h4 class="font-medium text-gray-800">Alamat</h4>
+                    <p class="text-gray-600">Jln Raya kelapa dua legok Karawaci Tangerang</p>
+                  </div>
+                </div>
+                <div class="flex items-start">
+                  <div class="w-8 h-8 rounded-full bg-yellow-100 flex items-center justify-center mr-4">
+                    <i class="fas fa-phone-alt text-yellow-500"></i>
+                  </div>
+                  <div>
+                    <h4 class="font-medium text-gray-800">Telepon</h4>
+                    <p class="text-gray-600">0813 1130 0079</p>
+                  </div>
+                </div>
+                <div class="flex items-start">
+                  <div class="w-8 h-8 rounded-full bg-yellow-100 flex items-center justify-center mr-4">
+                    <i class="fas fa-envelope text-yellow-500"></i>
+                  </div>
+                  <div>
+                    <h4 class="font-medium text-gray-800">Email</h4>
+                    <p class="text-gray-600">jlbus@gmail.com</p>
+                  </div>
+                </div>
+                <div class="flex items-start">
+                  <div class="w-8 h-8 rounded-full bg-yellow-100 flex items-center justify-center mr-4">
+                    <i class="fas fa-clock text-yellow-500"></i>
+                  </div>
+                  <div>
+                    <h4 class="font-medium text-gray-800">Jam Operasional</h4>
+                    <p class="text-gray-600">Senin-Sabtu: 09.30 - 17.00 WIB</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="md:w-1/2">
+            <!-- <div class="bg-gray-50 rounded-lg p-6 shadow-md">
+              <h3 class="text-xl font-semibold text-gray-800 mb-4">Formulir Kontak</h3>
+              <form>
+                <div class="mb-4">
+                  <label for="name" class="block text-gray-700 mb-2">Nama Lengkap</label>
+                  <input type="text" id="name"
+                    class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-500">
+                </div>
+                <div class="mb-4">
+                  <label for="email" class="block text-gray-700 mb-2">Email</label>
+                  <input type="email" id="email"
+                    class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-500">
+                </div>
+                <div class="mb-4">
+                  <label for="phone" class="block text-gray-700 mb-2">Nomor Telepon</label>
+                  <input type="tel" id="phone"
+                    class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-500">
+                </div>
+                <div class="mb-4">
+                  <label for="message" class="block text-gray-700 mb-2">Pesan</label>
+                  <textarea id="message" rows="4"
+                    class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-500"></textarea>
+                </div>
+                <button type="submit"
+                  class="w-full py-3 bg-yellow-500 hover:bg-yellow-600 rounded-lg text-white font-medium transition">Kirim
+                  Pesan</button>
+              </form> -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8">
+      <div class="container mx-auto px-4">
+        <div class="flex flex-col md:flex-row justify-between">
+          <div class="mb-6 md:mb-0">
+            <div class="flex items-center mb-4">
+              <div class="w-10 h-10 rounded-full bg-yellow-500 flex items-center justify-center mr-3">
+                <i class="fa-brands fa-bus text-white text-xl"></i>
+              </div>
+              <h3 class="text-xl font-bold">JL Explore Bus</h3>
+            </div>
+            <p class="text-gray-400 max-w-xs">"Teman Setia Perjalanan Wisata Anda"</p>
+          </div>
+
+          <div class="grid grid-cols-2 md:grid-cols-3 gap-8">
+            <div>
+              <h4 class="text-lg font-semibold mb-4">Tautan Cepat</h4>
+              <ul class="space-y-2">
+                <li><a href="#home" class="text-gray-400 hover:text-yellow-400 transition">Beranda</a>
+                </li>
+                <li><a href="#profile" class="text-gray-400 hover:text-yellow-400 transition">Profil</a>
+                </li>
+                <li><a href="#layanan" class="text-gray-400 hover:text-yellow-400 transition">Layanan</a>
+                </li>
+              </ul>
+            </div>
+
+            <!-- <div>
+                            <h4 class="text-lg font-semibold mb-4">Informasi</h4>
+                            <ul class="space-y-2">
+                                <li><a href="#" class="text-gray-400 hover:text-yellow-400 transition">Syarat
+                                        Pendaftaran</a>
+                                </li>
+                                <li><a href="#" class="text-gray-400 hover:text-yellow-400 transition">Biaya
+                                        Pendidikan</a>
+                                </li>
+                                <li><a href="#" class="text-gray-400 hover:text-yellow-400 transition">Kalender
+                                        Akademik</a>
+                                </li>
+                                <li><a href="#" class="text-gray-400 hover:text-yellow-400 transition">Berita Terbaru</a>
+                                </li>
+                            </ul>
+                        </div> -->
+
+            <div>
+              <h4 class="text-lg font-semibold mb-4">Sosial Media</h4>
+              <div class="flex space-x-4">
+                <a href="#"
+                  class="w-10 h-10 rounded-full bg-gray-700 flex items-center justify-center text-white hover:bg-yellow-500 transition">
+                  <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="#"
+                  class="w-10 h-10 rounded-full bg-gray-700 flex items-center justify-center text-white hover:bg-yellow-500 transition">
+                  <i class="fab fa-instagram"></i>
+                </a>
+                <a href="#"
+                  class="w-10 h-10 rounded-full bg-gray-700 flex items-center justify-center text-white hover:bg-yellow-500 transition">
+                  <i class="fab fa-youtube"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="border-t border-gray-700 mt-8 pt-6 text-center text-gray-400">
+          <p>&copy; 2025 Gondrong Project</p>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      // Theme switcher
+      const themeToggle = document.getElementById('theme-toggle');
+      const html = document.documentElement;
+
+      themeToggle.addEventListener('click', () => {
+        html.classList.toggle('dark');
+      });
+
+      // Smooth scrolling for navigation links
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+          e.preventDefault();
+
+          const targetId = this.getAttribute('href');
+          const targetElement = document.querySelector(targetId);
+
+          if (targetElement) {
+            targetElement.scrollIntoView({
+              behavior: 'smooth'
+            });
+          }
+        });
+      });
+    </script>
+  </body>
+
+</html>
